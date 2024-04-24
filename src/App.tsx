@@ -1,8 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Card from './Card';
+export function App() {
 
-function App() {
+  console.log('Hallo Welt')
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,7 +21,9 @@ function App() {
         >
           Learn React
         </a>
+        < Card />
       </header>
+      
     </div>
   );
 }
