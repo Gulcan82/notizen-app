@@ -8,7 +8,7 @@ type Props = Note & {
 }
   
 
-export default function NotesCard(props: Props) {
+ function NotesCard(props: Props) {
 
   const categories = props.categories.map(c => '#' + c).join(' ')
 
@@ -28,3 +28,5 @@ export default function NotesCard(props: Props) {
     </Card>
   )
 }
+
+export default NotesCard;
