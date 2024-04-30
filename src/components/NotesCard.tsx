@@ -1,15 +1,13 @@
 import Card from "react-bootstrap/Card";
-import { Note } from '../types/notes.type'
+import { Note } from "../types/notes.type";
 import { Button } from "react-bootstrap";
-import React from "react";
+
 
 type Props = Note & {
 
-
 }
-  
 
- function NotesCard(props: Props) {
+function NotesCard(props: Props) {
 
   const categories = props.categories.map(c => '#' + c).join(' ')
 
@@ -23,8 +21,8 @@ type Props = Note & {
         <Card.Subtitle className="mb-2 text-muted">{
           categories
         }</Card.Subtitle>
-        <Button variant="outline-success">Bearbeiten</Button>{' '}
-        <Button variant="outline-danger">löschen</Button>{' '}
+        <Button variant="outline-success" size="sm">Bearbeiten</Button>{' '}
+        <Button variant="outline-danger" size="sm">Löschen</Button>{' '}
       </Card.Body>
     </Card>
   )
