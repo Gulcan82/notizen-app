@@ -9,8 +9,8 @@ import { useState } from 'react';
 
 
 export default function App() {
-  const [ notes, setNotes ] = useState<Note[]>(notesData)
 
+  const [ notes, setNotes ] = useState<Note[]>(notesData)
 
   function addNote(note: Note): void {
     setNotes([...notes, note]);
@@ -28,7 +28,7 @@ export default function App() {
             <CreateNote notes = {notes} addNote = {addNote} />
         </Col>
         <Col>
-          <NotesList notes = {notes} setNotes= {setNotes} />
+          <NotesList notes = {notes} setNotes={setNotes} />
         </Col>
       </Row>
     </Container>
