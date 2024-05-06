@@ -5,4 +5,6 @@ export type Note = {
     date: Date,
     categories: string[],
     id: number
+    
+
 }
