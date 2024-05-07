@@ -12,4 +12,46 @@ export const useGetNotes = () => {
     });
 
     return { isLoading, data, error }
-}
+};
+export const usePostNote = () => {
+    const postNote = (note: Note) => {
+        return fetch(`${BASE_URL}/notes`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': userName
+            },
+            body: JSON.stringify(note)
+        });
+    };
+
+    return { postNote };
+};
+
+export const usePutNote = () => {
+    const putNote = (note: Note) => {
+        return fetch(`${BASE_URL}/notes/${note.id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': userName
+            },
+            body: JSON.stringify(note)
+        });
+    };
+
+    return { putNote };
+};
+export const useDeleteNote = () => {
+    const deleteNote = (id: number) => {
+        return fetch(`${BASE_URL}/notes/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': userName
+            }
+        });
+    };
+
+    return { deleteNote };
+};
